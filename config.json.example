@@ -1,0 +1,57 @@
+{
+  "script": {
+    "name": "Music API",
+    "description": "多平台音乐解析服务",
+    "version": "v2.0"
+  },
+  "modules": {
+    "platform": {
+      "kg": {
+        "mid": ["musicapi"],
+        "users": [
+          {
+            "userid": "",
+            "token": "",
+            "cookie": "",
+            "refreshLogin": true
+          }
+        ]
+      },
+      "tx": {
+        "users": [
+          {
+            "uin": "",
+            "token": "",
+            "refreshKey": "",
+            "cookie": "",
+            "vipType": "svip",
+            "refreshLogin": true
+          }
+        ],
+        "cdn_list": [
+          "http://isure.stream.qqmusic.qq.com/",
+          "http://wx.music.tc.qq.com/"
+        ]
+      }
+    }
+  },
+  "wy": {
+    "cookie": ""
+  },
+  "migu": {
+    "accounts": [""],
+    "password": "",
+    "sourceID": "220029",
+    "decrypt_key": "Jk8qzuePiJ1qE3mDYhLQ3T73DtDoAhLP",
+    "auto_refresh_hours": 3,
+    "last_refresh": ""
+  },
+  "security": {
+    "api_key": "",
+    "api_key_enabled": false,
+    "cors_origins": ["*"],
+    "cors_enabled": true,
+    "hide_errors": true,
+    "rate_limit_per_min": 0
+  }
+}

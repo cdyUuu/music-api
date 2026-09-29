@@ -1,0 +1,9 @@
+aiohttp>=3.12.15
+orjson>=3.11.3
+loguru>=0.7.3
+pycryptodome>=3.22.0
+cryptography>=46.0.3
+pydantic>=2.0.0
+requests>=2.31.0
+fastapi>=0.115.0
+uvicorn>=0.30.0

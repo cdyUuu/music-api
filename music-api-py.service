@@ -1,0 +1,26 @@
+[Unit]
+Description=Music API Python Service (FastAPI/Uvicorn Unix Socket)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/music-api-v2
+Environment="MUSIC_API_SOCKET=/run/music-api/music-api.sock"
+RuntimeDirectory=music-api
+RuntimeDirectoryMode=0750
+ExecStart=/var/www/music-api-v2/venv/bin/python py/server.py
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/www/music-api-v2/logs/python-service.log
+StandardError=append:/var/www/music-api-v2/logs/python-service.log
+
+# 安全加固
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/www/music-api-v2
+
+[Install]
+WantedBy=multi-user.target
