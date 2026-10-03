@@ -113,9 +113,9 @@ async def get_song_info(song_id: str) -> SongInfo:
         audio_info = data.get("audio_info", {})
         album_info = data.get("album_info", {})
         timelength = audio_info.get("timelength")
-        duration = _format_play_time(int(timelength) / 1000) if timelength else None
+        duration = _format_play_time(int(timelength) / 1000) if timelength else ""
         cover = album_info.get("sizable_cover", "")
-        cover_url = cover.format(size="500") if cover else None
+        cover_url = cover.format(size="500") if cover else ""
 
         info = SongInfo(
             songId=str(data.get("audio_id", "")),
